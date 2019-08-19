@@ -110,13 +110,15 @@ function initialize()
 	// setup markerRoots
 	////////////////////////////////////////////////////////////
 
-	// build markerControls
+// build markerControls
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
+		
+// Marker type
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
-
+// what is this 
 	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 
 	let video = document.getElementById( 'video' );
@@ -127,7 +129,9 @@ function initialize()
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
-	mesh1.rotation.x = -Math.PI/2;
+	
+// what is this 
+	mesh1.rotation.x = -Math.PI/2;  
 	
 	markerRoot1.add( mesh1 );
 }
